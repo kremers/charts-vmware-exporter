@@ -11,6 +11,8 @@ vsphere:
     hosts: true
     datastores: true
     vms: true
+    vmguests: true
+    snapshots: true
 
 podAnnotations:
   prometheus.io/scrape: "true"

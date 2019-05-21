@@ -14,4 +14,5 @@ data:
   VSPHERE_COLLECT_HOSTS: {{ .Values.vsphere.collectors.hosts | quote }}
   VSPHERE_COLLECT_DATASTORES: {{ default "True" .Values.vsphere.collectors.datastores | quote }}
   VSPHERE_COLLECT_VMS: {{ .Values.vsphere.collectors.vms | quote }}
-
+  VSPHERE_COLLECT_VMGUESTS: {{ .Values.vsphere.collectors.vmguests | quote }}
+  VSPHERE_COLLECT_SNAPSHOTS: {{ .Values.vsphere.collectors.snapshots | quote }}
