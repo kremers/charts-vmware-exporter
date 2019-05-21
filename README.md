@@ -5,7 +5,7 @@
 ## TL;DR;
 
 ```console
-$ helm install stable/vmware-exporter
+$ helm install kremers/charts-vmware-exporter
 ```
 
 ## Installing the Chart
@@ -13,7 +13,7 @@ $ helm install stable/vmware-exporter
 To install the chart with the release name `my-release`:
 
 ```console
-$ helm install --name my-release stable/vmware-exporter
+$ helm install --name my-release kremers/charts-vmware-exporter
 ```
 
 ## Uninstalling the Chart
