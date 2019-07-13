@@ -1,5 +1,6 @@
 # VMWare_exporter Helm Chart
 
+* Chart can be found at github [kremers/charts-vmware-exporter](https://github.com/kremers/charts-vmware-exporter)
 * Installs the VMWare_exporter for Prometheus [pryorda/vmware_exporter](https://github.com/pryorda/vmware_exporter)
 
 ## TL;DR;
@@ -35,7 +36,7 @@ The command removes all the Kubernetes components associated with the chart and 
 | `livenessProbe`                           | Liveness Probe settings                       | `{ "httpGet": { "path": "/healthz", "port": 9272 } "initialDelaySeconds": 30, "failureThreshold": 10}` |
 | `readinessProbe`                          | Rediness Probe settings                       | `{ "httpGet": { "path": "/healthz", "port": 9272 }` |
 | `image.repository`                        | Image repository                              | `pryorda/vmware_exporter`                               |
-| `image.tag`                               | Image tag. (`Must be >= 0.7.4`)               | `v0.9.1`                                                |
+| `image.tag`                               | Image tag. (`Must be >= 0.7.4`)               | `v0.9.7`                                                |
 | `image.pullPolicy`                        | Image pull policy                             | `IfNotPresent`                                          |
 | `service.enabled`                         | Enable a service for vmware_exporter          | `false`                                                 |
 | `service.type`                            | Kubernetes service type                       | `ClusterIP`                                             |

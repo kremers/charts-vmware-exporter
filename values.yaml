@@ -33,7 +33,7 @@ livenessProbe:
 
 image:
   repository: pryorda/vmware_exporter
-  tag: v0.9.1
+  tag: v0.9.7
   pullPolicy: IfNotPresent
 
 service:
