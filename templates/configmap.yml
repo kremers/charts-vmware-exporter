@@ -16,3 +16,16 @@ data:
   VSPHERE_COLLECT_VMS: {{ .Values.vsphere.collectors.vms | quote }}
   VSPHERE_COLLECT_VMGUESTS: {{ .Values.vsphere.collectors.vmguests | quote }}
   VSPHERE_COLLECT_SNAPSHOTS: {{ .Values.vsphere.collectors.snapshots | quote }}
+{{- range $section := .Values.vsphere.sections }}
+{{- $key := $section.name }}
+  VSPHERE_{{ $key }}_USER: {{ $section.user | quote }}
+  VSPHERE_{{ $key }}_HOST: {{ $section.user | quote }}
+  VSPHERE_{{ $key }}_IGNORE_SSL: {{ $section.ignoressl | quote }}
+{{- if $section.collectors }}
+  VSPHERE_{{ $key }}_COLLECT_HOSTS: {{ default $.Values.vsphere.collectors.hosts $section.collectors.hosts | quote }}
+  VSPHERE_{{ $key }}_COLLECT_DATASTORES: {{ default "True" $section.collectors.datastores | quote }}
+  VSPHERE_{{ $key }}_COLLECT_VMS: {{ default $.Values.vsphere.collectors.vms $section.collectors.vms | quote }}
+  VSPHERE_{{ $key }}_COLLECT_VMGUESTS: {{ default $.Values.vsphere.collectors.vmguests $section.collectors.vmguests | quote }}
+  VSPHERE_{{ $key }}_COLLECT_SNAPSHOTS: {{ default $.Values.vsphere.collectors.snapshots $section.collectors.snapshots | quote }}
+{{- end }}
+{{- end }}
