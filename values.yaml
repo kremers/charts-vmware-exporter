@@ -7,6 +7,7 @@ vsphere:
   password: na
   host: vcenter
   ignoressl: true
+  specsSize: 5000
   collectors:
     hosts: true
     datastores: true
