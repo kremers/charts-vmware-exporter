@@ -62,6 +62,7 @@ The command removes all the Kubernetes components associated with the chart and 
 | `vsphere.collectors.hosts`                | Collect host metrics                          | `true`                                                  |
 | `vsphere.collectors.datastores`           | Collect datastore metrics                     | `true`                                                  |
 | `vsphere.collectors.vms`                  | Collect vm metrics                            | `true`                                                  |
+| `vsphere.sections`                        | Add additional configuraiton sections via environment variables                            | `[]]`                                                  |
 
 
 
