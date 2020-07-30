@@ -20,7 +20,7 @@ data:
 {{- range $section := .Values.vsphere.sections }}
 {{- $key := $section.name }}
   VSPHERE_{{ $key }}_USER: {{ $section.user | quote }}
-  VSPHERE_{{ $key }}_HOST: {{ $section.user | quote }}
+  VSPHERE_{{ $key }}_HOST: {{ $section.host | quote }}
   VSPHERE_{{ $key }}_IGNORE_SSL: {{ $section.ignoressl | quote }}
 {{- if $section.collectors }}
   VSPHERE_{{ $key }}_COLLECT_HOSTS: {{ default $.Values.vsphere.collectors.hosts $section.collectors.hosts | quote }}
