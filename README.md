@@ -32,7 +32,7 @@ The command removes all the Kubernetes components associated with the chart and 
 
 | Parameter                                 | Description                                   | Default                                                 |
 |-------------------------------------------|-----------------------------------------------|---------------------------------------------------------|
-| `replicas`                                | Number of nodes                               | `1`                                                     |
+| `replicaCount`                            | Number of nodes                               | `1`                                                     |
 | `livenessProbe`                           | Liveness Probe settings                       | `{ "httpGet": { "path": "/healthz", "port": 9272 } "initialDelaySeconds": 30, "failureThreshold": 10}` |
 | `readinessProbe`                          | Rediness Probe settings                       | `{ "httpGet": { "path": "/healthz", "port": 9272 }` |
 | `image.repository`                        | Image repository                              | `pryorda/vmware_exporter`                               |
