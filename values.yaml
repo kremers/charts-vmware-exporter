@@ -6,6 +6,9 @@ vsphere:
   password: na
   host: vcenter
   ignoressl: true
+  fetchCustomAttributes: true
+  fetchTags: true
+  fetchAlarms: true
   specsSize: 5000
   sections: {}
   collectors:
@@ -34,7 +37,7 @@ livenessProbe:
 
 image:
   repository: pryorda/vmware_exporter
-  tag: v0.13.0
+  tag: v0.13.2
   pullPolicy: IfNotPresent
 
 service:
