@@ -82,3 +82,18 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+# Set the container security context
+securityContext:
+  {}
+  #  capabilities:
+  #    drop: [ALL]
+  #  readOnlyRootFilesystem: true
+  #  runAsGroup: 65532
+  #  runAsNonRoot: true
+  #  runAsUser: 65532
+
+# Set the Pod security context
+podSecurityContext:
+  {}
+  #  fsGroup: 65532
