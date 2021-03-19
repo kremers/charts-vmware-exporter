@@ -55,6 +55,8 @@ The command removes all the Kubernetes components associated with the chart and 
 | `nodeSelector`                            | Node labels for pod assignment                | `{}`                                                    |
 | `tolerations`                             | Toleration labels for pod assignment          | `[]`                                                    |
 | `affinity`                                | Affinity settings for pod assignment          | `{}`                                                    |
+| `securityContext`                         | Security Context for the Container            | `{}`                                                    |
+| `podSecurityContext`                      | Security Context for the Pod                  | `{}`                                                    |
 | `vsphere.user`                            | User for vcenter login                        | `user`                                                  |
 | `vsphere.password`                        | Password for vcenter login                    | `na`                                                    |
 | `vsphere.host`                            | Hostname or IP for vcenter login              | `vcenter`                                               |
@@ -148,5 +150,3 @@ Parametrize the stable/prometheus chart like in the following example, take care
       enabled: false
     alertmanagerFiles:
       alertmanager.yml: ""
-
-
