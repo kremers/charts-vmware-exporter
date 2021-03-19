@@ -25,6 +25,15 @@ data:
   VSPHERE_{{ $key }}_USER: {{ $section.user | quote }}
   VSPHERE_{{ $key }}_HOST: {{ $section.host | quote }}
   VSPHERE_{{ $key }}_IGNORE_SSL: {{ $section.ignoressl | quote }}
+  {{- if $section.fetchCustomAttributes }}
+  VSPHERE_{{ $key }}_FETCH_CUSTOM_ATTRIBUTES: {{ $section.fetchCustomAttributes | quote }}
+  {{- end }}
+  {{- if $section.fetchTags }}
+  VSPHERE_{{ $key }}_FETCH_TAGS: {{ $section.fetchTags | quote }}
+  {{- end }}
+  {{- if $section.fetchAlarms }}
+  VSPHERE_{{ $key }}_FETCH_ALARMS: {{ $section.fetchAlarms | quote }}
+  {{- end }}
 {{- if $section.collectors }}
   VSPHERE_{{ $key }}_COLLECT_HOSTS: {{ default $.Values.vsphere.collectors.hosts $section.collectors.hosts | quote }}
   VSPHERE_{{ $key }}_COLLECT_DATASTORES: {{ default "True" $section.collectors.datastores | quote }}
