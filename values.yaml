@@ -4,6 +4,7 @@ replicaCount: 1
 vsphere:
   user: user
   password: na
+  existingSecret: {}
   host: vcenter
   ignoressl: true
   fetchCustomAttributes: true

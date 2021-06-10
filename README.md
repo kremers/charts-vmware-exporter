@@ -59,6 +59,7 @@ The command removes all the Kubernetes components associated with the chart and 
 | `podSecurityContext`                      | Security Context for the Pod                  | `{}`                                                    |
 | `vsphere.user`                            | User for vcenter login                        | `user`                                                  |
 | `vsphere.password`                        | Password for vcenter login                    | `na`                                                    |
+| `vsphere.passwordSecret`                  | Provide password for vCenter login w/ secret  |                                                         |
 | `vsphere.host`                            | Hostname or IP for vcenter login              | `vcenter`                                               |
 | `vsphere.ignoressl`                       | User for vcenter                              | `user`                                                  |
 | `vsphere.collectors.hosts`                | Collect host metrics                          | `true`                                                  |

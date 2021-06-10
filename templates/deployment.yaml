@@ -35,7 +35,7 @@ spec:
             - configMapRef:
                 name: {{ template "vmware-exporter.fullname" . }}-config
             - secretRef:
-                name: {{ template "vmware-exporter.fullname" . }}-secret
+                name: {{ if not .Values.vsphere.existingSecret }}{{ template "vmware-exporter.fullname" . }}-secret{{ else }}{{ .Values.vsphere.existingSecret }}{{ end }}
           livenessProbe:
 {{ toYaml .Values.livenessProbe | indent 12 }}
           readinessProbe:
